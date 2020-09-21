@@ -1,0 +1,20 @@
+
+
+#palais {
+  background-image: url(../../assets/image/avignon-palais.png);
+}
+
+#glace {
+  background-image: url(../../assets/image/glace.png);
+}
+
+@media (max-width: 500px) {
+  /* CSS appliqué aux petits écrans */
+  .papal {
+     display: none!important
+  }
+
+  #glace {
+    display: none!important
+  }
+}

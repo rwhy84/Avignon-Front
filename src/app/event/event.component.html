@@ -1,0 +1,42 @@
+<div class="styleBlog">
+  <div class="d-flex justify-content-center align-items-center" style="height: inherit;min-height: initial;width: 100%;position: absolute;left: 0;background-color: rgba(30,41,99,0.23);">
+      <div class="d-flex align-items-center order-12" style="height:200px;">
+          <div class="container">
+              <h1 class="text-center" style="color: rgb(242,245,248);font-size: 45px;font-weight: bold;font-family: Roboto, sans-serif;">Les Evenements</h1>
+
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid row p-0 m-0">
+
+
+
+
+  <div class="col-lg-3 col-md-4 col-sm-12 p-0" style="position: relative" *ngFor="let e of events">
+    <!-- <ng-container *ngIf="e.endEvent > date "> -->
+    <!-- <ng-container *ngIf="e.endEvent  > date "> -->
+      <div class="layout-info">
+<span>{{ e.startEvent |date: 'dd LLL' }}</span>
+<span>{{ e.startEvent |date: 'yyyy' }}</span>
+
+      </div>
+      <a routerLink="{{ e.id }}"><img class="img-fluid img-fill" style="object-fit:contain;" src="{{ e.coverImage }}"></a>
+
+
+
+
+    <span *ngIf="e.etablissement.category.name === 'Musée'"
+      class="badge badge-danger ">{{ e.etablissement.category.name }}</span>
+    <span *ngIf="e.etablissement.category.name === 'Restaurant'"
+      class="badge badge-primary ">{{ e.etablissement.category.name }}</span>
+    <span *ngIf="e.etablissement.category.name === 'Bar'"
+      class="badge badge-warning ">{{ e.etablissement.category.name }}</span>
+    <h5 class="text-center etablissement-name">{{ e.etablissement.name }}</h5>
+    <h4 class="text-left event-name">{{ e.name }}</h4>
+
+    <!-- </ng-container> -->
+  <!-- </div> -->

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+
+h3 {
+
+    font-family: Merriweather;
+    font-size: 2em;
+font-weight: 500;
+    color:#364f75
+}
+
+
+.styleBlog {
+
+  height: 289px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #364f75;
+
+
+}
+
+img {
+  /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+    filter: gray; /* IE5+ */
+    -webkit-filter: opacity(50%); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all .2s ease-in-out;
+  }
+
+  img:hover {
+  filter: none;
+    -webkit-filter: opacity(100%);
+    -webkit-transform: scale(1);
+  }
+
+  .badge {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+  }
+
+
+  .etablissement-name {
+    position: absolute;
+    font-family: Caveat;
+    font-size: 26px;
+    bottom: 30% ;
+    left: 5%;
+    color: red;
+
+  }
+
+  .event-name {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    right: 10%;
+
+    color: #364f75
+  }
+
+.layout-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 83px;
+  height: 83px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-family: Merriweather,serif;
+  font-weight: 700;
+  background-color: #364f75;
+  z-index: 999;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background-color: red;
+  z-index: 999;
+}

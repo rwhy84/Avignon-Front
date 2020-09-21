@@ -1,0 +1,12 @@
+<div class="styleBlog" [ngStyle]="{backgroundImage: 'url(http://localhost:3000/images/events/' + blog.imageName +') '}">
+  <div class="d-flex justify-content-center align-items-center" style="height: inherit;min-height: initial;width: 100%;position: absolute;left: 0;background-color: rgba(30,41,99,0.23);">
+      <div class="d-flex align-items-center order-12" style="height:200px;">
+          <div class="container">
+              <h1 class="text-center" style="color: rgb(242,245,248);font-size: 45px;font-weight: bold;font-family: Roboto, sans-serif;">{{blog.title}}</h1>
+
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container row mx-auto" [innerHTML]="blog.content">
+</div>

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.styleBlog {
+
+  height: 289px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #364f75;
+
+
+}
+
+.title-cat {
+font-family: Merriweather;
+color: #364f75;
+font-weight: 700;
+font-size: 17px;
+}
+
+.cat-content {
+font-family: Montserrat;
+color: #777;
+font-weight: 100;
+font-size: 16px;
+}
+
+h2 {
+
+  font-family: Merriweather,serif;
+  font-weight: 700;
+  letter-spacing: -.015em;
+  color: #364f75;
+  font-size: 25px;
+  line-height: 1.28em;
+
+}
+
+.description {
+
+  font-family: Montserrat,sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #777;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}

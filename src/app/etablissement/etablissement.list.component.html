@@ -1,0 +1,179 @@
+<div class="styleBlog">
+  <div class="d-flex justify-content-center align-items-center" style="height: inherit;min-height: initial;width: 100%;position: absolute;left: 0;background-color: rgba(30,41,99,0.23);">
+      <div class="d-flex align-items-center order-12" style="height:200px;">
+          <div class="container">
+              <h1 class="text-center" style="color: rgb(242,245,248);font-size: 45px;font-weight: bold;font-family: Roboto, sans-serif;">Les Etablissements</h1>
+
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container row p-0 mx-auto">
+
+<div class="col-lg-4 col-sm-12 p-3" *ngFor="let et of etablissement">
+  <div class="layout-info m-3">
+    <span >{{ et.category.name }}</span>
+
+    </div>
+  <img class="img-fluid" src="{{ et.coverImage }}" alt="">
+  <div style="height: 20vh; background-color: #F4F2F1; display: block;" class="text-center d-flex flex-column justify-content-center align-items-center">
+  <span class="text-center d-block etablissement-name">{{ et.name }}</span>
+  <a routerLink="{{ et.id }}" class="button text-center" type="button" data-hover="BIEN SUR!"><span>En voir plus ?</span></a>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- <div>
+  <div *ngFor="let et of etablissement">
+    <p>{{ et.id }}</p>
+    <p>{{ et.name }}</p>
+    <p [innerHTML]="et.description"></p>
+    <p>{{ et.adress }}</p>
+    <p>{{ et.lat }}</p>
+    <p>{{ et.lng }}</p>
+    <p>{{ et.category.name }}</p>
+    <p>{{ et.category.name }}</p>
+    <a routerLink="{{ et.id }}">Voir la fiche</a>
+
+
+    <img src="{{ et.coverImage }}">
+
+
+  </div> -->
+</div>
+<!-- </div> -->
+
+<style>
+
+.etablissement-name {
+    font-family: Caveat;
+    font-size: 26px;
+    bottom: 30% ;
+    left: 5%;
+    color: rgb(241,91,67);
+
+  }
+
+
+  .styleBlog {
+
+height: 289px;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-color: #364f75;
+
+
+}
+.layout-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 83px;
+  height: 83px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-family: Merriweather,serif;
+  font-weight: 700;
+  background-color: #364f75;
+  z-index: 999;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  margin: 1em;
+  padding: 10px 30px;
+  border: 2px solid rgb(241,91,67);
+  overflow: hidden;
+  text-decoration: none;
+  font-size: 14px;
+  outline: none;
+  color: rgb(241,91,67);
+  background: transparent;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+}
+
+.button span {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.button:before, .button:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.button:before {
+  content: attr(data-hover);
+  -webkit-transform: 0.4s;
+  -moz-transform: 0.4s;
+  -ms-transform: 0.4s;
+  -o-transform: 0.4s;
+  transform: 0.4s;
+}
+
+.button:hover span, .button:active span {
+  opacity: 0;
+  -webkit-transform: 0.4s;
+  -moz-transform: 0.4s;
+  -ms-transform: 0.4s;
+  -o-transform: 0.4s;
+  transform: 0.4s;
+}
+
+.button:hover:before, .button:active:after {
+  opacity: 1;
+  -webkit-transform: 0.4s;
+  -moz-transform: 0.4s;
+  -ms-transform: 0.4s;
+  -o-transform: 0.4s;
+  transform: 0.4s;
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  -o-transition-delay: .4s;
+  transition-delay: .4s;
+}
+
+.button:active:before {
+  -webkit-transform: 0.4s;
+  -moz-transform: 0.4s;
+  -ms-transform: 0.4s;
+  -o-transform: 0.4s;
+  transform: 0.4s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+</style>

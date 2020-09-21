@@ -1,0 +1,37 @@
+<div id="palais" style="height: 289px;background-position: center;background-size: cover;background-repeat: no-repeat;">
+  <div class="d-flex justify-content-center align-items-center" style="height: inherit;min-height: initial;width: 100%;position: absolute;left: 0;background-color: rgba(30,41,99,0.23);">
+      <div class="d-flex align-items-center order-12" style="height:200px;">
+          <div class="container">
+              <h1 class="text-center" style="color: rgb(242,245,248);font-size: 45px;font-weight: bold;font-family: Roboto, sans-serif;">LES ACTUALITES</h1>
+              <h3 class="text-center" style="color:rgb(242,245,248);padding-top:0.25em;padding-bottom:0.25em;font-weight:normal;">Retrouvez les actualités autour d'Avignon</h3>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- <div class="container row p-3">
+
+  <div class="col-lg-3 col-md-4 col-sm-12">
+<div *ngFor="let item of blog" class="card p-2" style="width: 18rem;">
+  <img class="card-img-top" src="http://localhost:3000/images/events/{{item.imageName}}" alt="{{item.title}}">
+  <div class="card-body">
+    <h5 class="card-title">{{ item.title}}</h5>
+    <a routerLink="article/{{item.id}}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+</div> -->
+
+<div class="container row mx-auto">
+<div  class="col-lg-12 col-md-12 col-sm-12">
+<figure *ngFor="let item of blog" class="snip1527 " style="width: 100%;">
+  <div class="image"><img src="http://localhost:3000/images/events/{{item.imageName}}" alt="{{item.title}}" /></div>
+  <figcaption style="width: 100%;">
+      <div class="date"><span class="day">{{item.createdAt |date:'dd'}}</span><span class="month">{{item.createdAt |date:'MMM'}}</span></div>
+      <h3>{{item.title}}</h3>
+      <p [innerHTML]=" item.content "> ...</p>
+  </figcaption>
+  <a routerLink="article/{{item.id}}"></a>
+</figure>
+</div>
+</div>
+

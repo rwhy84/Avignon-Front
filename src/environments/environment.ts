@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  algolia: {
+    appId: 'pl6EOJ5YJRPJ',
+    apiKey: 'db01ded23ffb155157d4ef49ea8fdc51'
+  }
 };
 
 /*
